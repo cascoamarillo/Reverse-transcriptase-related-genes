@@ -64,11 +64,11 @@ An optional appendix reproduces the alternative **manual** route
 
 ## Outputs
 
-- `Ar_normalized_counts.txt` — DESeq2-normalized counts
-- `Ar_gene_modules.txt` — gene → module-color assignments
-- `Ar_module_trait_cor.txt` — module-eigengene correlations with infection/time traits
-- `Ar_TOM-block.*.RData` — saved topological-overlap matrices
-- `Ar_edgelist.tsv` — edge list (modules of interest) for Cytoscape/VisANT
+- `Ar_normalized_counts.txt` - DESeq2-normalized counts
+- `Ar_gene_modules.txt` - gene → module-color assignments
+- `Ar_module_trait_cor.txt` - module-eigengene correlations with infection/time traits
+- `Ar_TOM-block.*.RData` - saved topological-overlap matrices
+- `Ar_edgelist.tsv` - edge list (modules of interest) for Cytoscape/VisANT
 - soft-threshold, dendrogram, and module-eigengene plots
 
 ## Deviations from the tutorial (documented)
