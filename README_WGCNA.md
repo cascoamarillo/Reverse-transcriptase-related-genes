@@ -1,4 +1,4 @@
-# WGCNA co-expression analysis — *Adineta ricciae*
+# WGCNA co-expression analysis - *Adineta ricciae*
 
 Weighted gene co-expression network analysis (WGCNA) of the bdelloid rotifer
 *Adineta ricciae*, re-analysing the RNA-seq data of **Nowell et al. 2024**
