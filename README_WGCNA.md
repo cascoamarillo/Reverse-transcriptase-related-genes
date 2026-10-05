@@ -27,17 +27,17 @@ the *A. ricciae* count matrix:
 
 1. **Load** the gene-level count matrix (genes × samples).
 2. **Normalize** with DESeq2 (`DESeqDataSetFromMatrix` → `DESeq`), design `~ Group`.
-3. **Transform / filter** — variance-stabilizing transformation (`getVarianceStabilizedData`)
+3. **Transform / filter** - variance-stabilizing transformation (`getVarianceStabilizedData`)
    and retain the top-variance genes (default: 95th-percentile variance, as in the tutorial).
-4. **Soft threshold** — `pickSoftThreshold` over powers 1–40; pick the lowest
+4. **Soft threshold** - `pickSoftThreshold` over powers 1–40; pick the lowest
    power reaching signed scale-free R² ≥ 0.90.
-5. **Network / modules** — `blockwiseModules` (signed network, `minModuleSize = 30`,
+5. **Network / modules** - `blockwiseModules` (signed network, `minModuleSize = 30`,
    `mergeCutHeight = 0.25`, `deepSplit = 2`).
 6. **Module colors + dendrogram** (`labels2colors`, `plotDendroAndColors`) → `Ar_gene_modules.txt`.
-7. **Module eigengenes** (`moduleEigengenes` → `orderMEs`) — a module-by-sample
+7. **Module eigengenes** (`moduleEigengenes` → `orderMEs`) - a module-by-sample
    heatmap plus a **module-trait correlation** heatmap (`labeledHeatmap`) against
    infection status, timepoint, and late (24 hpi) infection → `Ar_module_trait_cor.txt`.
-8. **Modules of interest** — expression profiles and a topological-overlap
+8. **Modules of interest** - expression profiles and a topological-overlap
    (`TOMsimilarityFromExpr`) **edge list** for Cytoscape/VisANT → `Ar_edgelist.tsv`.
 
 An optional appendix reproduces the alternative **manual** route
@@ -57,7 +57,7 @@ An optional appendix reproduces the alternative **manual** route
 
 ## Inputs
 
-- `Ar_counts.1.txt` — gene-level counts (htseq-count), tab-delimited; first column
+- `Ar_counts.1.txt` - gene-level counts (htseq-count), tab-delimited; first column
   `Count` = gene ID (`ARIC|g#`), then the 12 sample columns. The sample→group
   mapping is parsed automatically from the `<ctrl|treatment>.<7|24><letter>` names
   in section 2 of the script (no editing needed for this dataset).
@@ -76,7 +76,7 @@ An optional appendix reproduces the alternative **manual** route
 - The tutorial fed a **VST + 95%-variance-filtered** matrix at **power 9**
   (maize, 24 samples). Here a **signed** network on **12 samples** uses
   **power 20** (WGCNA recommends ~18 for <20 samples; scale-free R² ≈ 0.92, on
-  the plateau), which resolves differentiated modules — the **turquoise** module
+  the plateau), which resolves differentiated modules - the **turquoise** module
   contains the *A. ricciae* RVT homolog. The published figure used raw
   DESeq-normalized counts (`USE_VST_FILTER = FALSE`); flip to `TRUE` for the
   VST/variance-filtered variant.
@@ -105,7 +105,7 @@ R with `tidyverse`, `magrittr`, `DESeq2`, `WGCNA`, `genefilter`
 - Nowell RW, Rodriguez F et al. (2024). Bdelloid rotifers deploy horizontally acquired
   biosynthetic genes against a fungal pathogen. *Nat. Commun.* 15:5787.
   https://doi.org/10.1038/s41467-024-49919-1
-- Tutorial: ISU Bioinformatics Workbook — WGCNA.
+- Tutorial: ISU Bioinformatics Workbook - WGCNA.
   https://bioinformaticsworkbook.org/tutorials/wgcna.html
 
 ## Data availability
