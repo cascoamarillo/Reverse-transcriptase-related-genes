@@ -25,19 +25,19 @@ tool versions, and parameters.
 
 ## Analyses at a glance
 
-**Neurospora small RNA-seq** — RNAs co-purifying with the native NcRVT complex
+**Neurospora small RNA-seq** - RNAs co-purifying with the native NcRVT complex
 (blasticidin S–induced *N. crassa* FGSC 2225), sequenced before and after in
 vitro extension with dNTPs/NTPs to identify NcRVT-associated and
 NcRVT-extendable RNAs and the non-templated 3′ tails added by the enzyme.
 Pipeline: Trimmomatic → Bowtie → feature quantification (bedtools) → soft-clip
 3′-tail analysis (BWA-MEM / SE-MEI / qckitfastq).
 
-**Neurospora mRNA-seq** — poly(A) RNA-seq of two wild-type strains (FGSC 2489,
+**Neurospora mRNA-seq** - poly(A) RNA-seq of two wild-type strains (FGSC 2489,
 FGSC 4200) and their isogenic *rvt*-null mutants (H3, H2), under blasticidin S
 induction vs uninduced control, in biological replicates. Pipeline:
 cutadapt → FASTX quality trimming → TopHat/Bowtie2 → htseq-count → DESeq.
 
-**Adineta ricciae WGCNA** — re-analysis of the fungal-infection RNA-seq time
+**Adineta ricciae WGCNA** - re-analysis of the fungal-infection RNA-seq time
 course from Nowell et al. 2024, adding weighted gene co-expression network
 analysis (WGCNA). A signed network (power 20) resolves co-expression modules;
 the turquoise module contains the *A. ricciae* RVT homolog.
